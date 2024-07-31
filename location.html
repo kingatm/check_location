@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check location</title>
+</head>
+
+<body>
+    <script>
+        function getLocation() {
+            const location = prompt('Enter your location:').toLowerCase();
+            const validLocations = ['punjab', 'haryana', 'chandigarh'];
+            if (validLocations.includes(location)) {
+                const username = prompt("Enter username: ");
+                const password = prompt("Enter password: ");
+                if (username === 'arsh' && password === '1708') {
+                    window.location.href = 'https://www.google.com/maps/place/' + location, '_blank';
+                }
+                else {
+                    alert('wrong credentials');
+                }
+            }
+            else {
+                alert('access denied');
+            }
+        }
+        window.onload = getLocation;
+    </script>
+</body>
+
+</html>
